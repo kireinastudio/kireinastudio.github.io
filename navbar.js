@@ -1,94 +1,67 @@
-// Hide Header on on scroll down
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('header').outerHeight();
+(function($) { "use strict";
+		
+	//Page cursors
 
-$(window).scroll(function(event){
-    didScroll = true;
-});
-
-setInterval(function() {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-}, 250);
-
-function hasScrolled() {
-    var st = $(this).scrollTop();
-    
-    // Make sure they scroll more than delta
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
-    
-    // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is "behind" the navbar.
-    if (st > lastScrollTop && st > navbarHeight){
-        // Scroll Down
-        $('header').removeClass('nav-down').addClass('nav-up');
-    } else {
-        // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
-            $('header').removeClass('nav-up').addClass('nav-down');
-        }
-    }
-    
-    lastScrollTop = st;
-}
-
-//Color Changer
-
-$(window).scroll(function () {
-    if ($(window).scrollTop() >= 50) {
-    $('.navcolor').css('background','white');
-    $('.navcolor').css('box-shadow','rgba(0, 0, 0, 0.2) 0px 6px 6px 0px');
-    } else {
-    $('.navcolor').css('background','transparent');
-    $('.navcolor').css('box-shadow','0px 0px 0px 0px');
-    }
+    document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
+        t.style.left = n.clientX + "px", 
+		t.style.top = n.clientY + "px", 
+		e.style.left = n.clientX + "px", 
+		e.style.top = n.clientY + "px", 
+		i.style.left = n.clientX + "px", 
+		i.style.top = n.clientY + "px"
     });
+    var t = document.getElementById("cursor"),
+        e = document.getElementById("cursor2"),
+        i = document.getElementById("cursor3");
+    function n(t) {
+        e.classList.add("hover"), i.classList.add("hover")
+    }
+    function s(t) {
+        e.classList.remove("hover"), i.classList.remove("hover")
+    }
+    s();
+    for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+        o(r[a])
+    }
+    function o(t) {
+        t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+    }
+	
+	//Navigation
 
-    /* Open the sidenav */
-function openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
-}
+	var app = function () {
+		var body = undefined;
+		var menu = undefined;
+		var menuItems = undefined;
+		var init = function init() {
+			body = document.querySelector('body');
+			menu = document.querySelector('.menu-icon');
+			menuItems = document.querySelectorAll('.nav__list-item');
+			applyListeners();
+		};
+		var applyListeners = function applyListeners() {
+			menu.addEventListener('click', function () {
+				return toggleClass(body, 'nav-active');
+			});
+		};
+		var toggleClass = function toggleClass(element, stringClass) {
+			if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
+		};
+		init();
+	}();
 
-/* Close/hide the sidenav */
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-} 
-
-//Social link hover event triggers
-$("#instagram").hover(function(){
-    $('#mySidenav').css("background-color", "#ca2693");
-    }, function(){
-    $('#mySidenav').css("background-color", "#ffffff");
-});
-
-$("#twitter").hover(function(){
-    $('#mySidenav').css("background-color", "#00aced");
-    }, function(){
-    $('#mySidenav').css("background-color", "#ffffff");
-});
-
-$("#dribbble").hover(function(){
-    $('#mySidenav').css("background-color", "#e14680");
-    }, function(){
-    $('#mySidenav').css("background-color", "#ffffff");
-});
-
-$("#github").hover(function(){
-    $('#mySidenav').css("background-color", "#592a79");
-    }, function(){
-    $('#mySidenav').css("background-color", "#ffffff");
-});
-
-$("#steam").hover(function(){
-    $('#mySidenav').css("background-color", "#146197");
-    }, function(){
-    $('#mySidenav').css("background-color", "#ffffff");
-});
-
-
-
+	
+	//Switch light/dark
+	
+	$("#switch").on('click', function () {
+		if ($("body").hasClass("light")) {
+			$("body").removeClass("light");
+			$("#switch").removeClass("switched");
+		}
+		else {
+			$("body").addClass("light");
+			$("#switch").addClass("switched");
+		}
+	});
+	
+})(jQuery); 

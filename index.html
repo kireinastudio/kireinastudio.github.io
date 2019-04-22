@@ -7,7 +7,6 @@
 
     <!--Bootstrap CDN,Fonts & Stylesheets-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> 
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="stylesheet.css">
@@ -18,46 +17,72 @@
 
   <body>
     <!--Header-->
-      <header id="header" class="navcolor">
-        <a href="index.html">
-       <img class="logo float-left" src="assets/ad_v3_transparent.png" alt="Navbar Logo">
-        </a>
-       <button class="btn btn-lg btn-link navbar-button float-right" onclick="openNav()">
-       <i class="fas fa-bars menu-button"></i>
-       </button>
-      </header>
+
       <!--End of Header-->
 
       <!--Main Content-->
       <main>
         <!--Navigation Menu-->
-          <div id="mySidenav" class="sidenav">
-              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-              <div class="social-section">
-                <h1 class="navbar-section-header">-SOCIAL</h1>
-              <a id="instagram" href="https://instagram.com/naxph" target="_blank">Instagram</a>
-              <a id="twitter" href="https://twitter.com/naxph_" target="_blank">Twitter</a>
-              <a id="dribbble" href="https://dribbble.com/naxph" target="_blank">Dribbble</a>
-              <a id="github" href="https://github.com/naxph" target="_blank">GitHub</a>
-              <a id="steam" href="https://steamcommunity.com/id/saltcsgo" target="_blank">Steam</a>
-              </div>
-              <div class="menu-section">
-                <h1 class="navbar-section-header">-MENU</h1>
-                  <a class="menu-item" href="index.html">Home</a>
-                  <a class="menu-item" href="mywork.html">My Work</a>
-                  <a class="menu-item" href="aboutme.html">Who am I?</a>
-              </div>
-              <div class="email-section">
-                <h1 class="navbar-section-header">-CONTACT</h1>
-                <a class="email-item" href="mailto:thatonecoder420@gmail.com?Subject=Hello%20there" target="_top">thatonecoder420@gmail.com</a>
-                <a class="" href="secret.html"></a>
-              </div>
+        <header class="cd-header">
+          <div class="header-wrapper">
+            <div class="logo-wrap">
+              <a href="#"  style="font-family: 'averta_demoextrabold_italic', sans-serif;" class="hover-target">kireinastudio.</a>
             </div>
+            <div class="nav-but-wrap">
+              <div class="menu-icon hover-target">
+                <span class="menu-icon__line menu-icon__line-left"></span>
+                <span class="menu-icon__line"></span>
+                <span class="menu-icon__line menu-icon__line-right"></span>
+              </div>					
+            </div>					
+          </div>				
+        </header>
+      
+        <div class="nav">
+          <div class="nav__content">
+            <ul class="nav__list">
+              <li class="nav__list-item active-nav"><a href="#" class="hover-target">home</a></li>
+              <li class="nav__list-item"><a href="#" class="hover-target">feed</a></li>
+              <li class="nav__list-item"><a href="#" class="hover-target">our work</a></li>
+              <li class="nav__list-item"><a href="#" class="hover-target">contact</a></li>
+            </ul>
+          </div>
+        </div>		
+      
+        <div class="section full-height over-hide">	
+          <div class="switch-wrap">
+              <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+            <h1>we are <span id="typed"></span></h1>
+            <script>       var options = {
+                strings: ["Developers ^1500", "Designers ^1500", "People ^1500", "Kireinastudio"],
+                typeSpeed: 40,
+                backSpeed: 40,
+                }
+            var typed = new Typed("#typed", options);</script>
+            
+            <div id="switch" class="hover-target">
+              <div id="circle"></div>
+            </div>
+            <p><span>dark</span> - <span>light</span></p>
+          </div>
+        </div>	
+        
+        <div class='cursor' id="cursor"></div>
+        <div class='cursor2' id="cursor2"></div>
+        <div class='cursor3' id="cursor3"></div>
+      
+
+
+
+
+
+
+
+
           <!--End of Navigation Menu-->
 
           <section id="landing-page">
             <!--Hero Text-->
-      <h1 id="hero-text" class="display-3 hero-text"><strong>Creating experiences that<br> simplify your life.</strong></h1>
 
       <!--Link to Contact Section-->
       <a class="projects-link" onclick="contactScroll()" href="#!"><h1 class="display-4 projects-page-link">Let's do it <i id="arrow" class="fas fa-arrow-circle-right"></i></h1></a>
@@ -110,8 +135,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="https://sethusenthil.com/Product-Sans/api/font.js"></script>
     <script src="navbar.js"></script>
-    <script src="scroll-down.js"></script>
+
   </body>
 </html>
