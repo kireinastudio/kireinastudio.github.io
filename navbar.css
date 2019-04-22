@@ -522,6 +522,14 @@ body.light .switch-wrap p span:nth-child(1):before {
 	opacity: 0;
 }
 
+body.light .services-header {
+	color: #000;
+}
+
+body.light .services-type {
+	color: #000;
+}
+
 /* #Link to page
 ================================================== */
 

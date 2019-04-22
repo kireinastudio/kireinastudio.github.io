@@ -62,6 +62,7 @@
 			$("body").addClass("light");
 			$("#switch").addClass("switched");
 		}
+		
 	});
 	
 })(jQuery); 

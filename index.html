@@ -11,15 +11,10 @@
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="footer.css">
     <title>kireinastudio</title>
   </head>
 
   <body>
-    <!--Header-->
-
-      <!--End of Header-->
-
       <!--Main Content-->
       <main>
         <!--Navigation Menu-->
@@ -49,10 +44,32 @@
           </div>
         </div>		
       
-        <div class="section full-height over-hide">	
+        <div class="section full-height over-hide">
+          <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+          <script>window.onload = function() {
+              lax.setup() // init
+            
+              const updateLax = () => {
+                lax.update(window.scrollY)
+                window.requestAnimationFrame(updateLax)
+              }
+            
+              window.requestAnimationFrame(updateLax)
+            }
+            </script>
+            <div class="d-block squaresContainer">
+            <div class="lax square1" data-lax-preset="spinOut fadeIn"></div>
+
+            <div class="lax square2" data-lax-preset="spinOut fadeInOut"></div>
+
+            <div class="lax square3" data-lax-preset="spinOut fadeInOut"></div>
+
+            <div class="lax square4" data-lax-preset="spinOut fadeInOut"></div>
+          </div>
+            
           <div class="switch-wrap">
               <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-            <h1>we are <span id="typed"></span></h1>
+            <h1 class=""><span class="hover-target">we are <span id="typed"></span></span></h1>
             <script>       var options = {
                 strings: ["Developers ^1500", "Designers ^1500", "People ^1500", "Kireinastudio"],
                 typeSpeed: 40,
@@ -71,67 +88,43 @@
         <div class='cursor2' id="cursor2"></div>
         <div class='cursor3' id="cursor3"></div>
       
-
-
-
-
-
-
-
-
-          <!--End of Navigation Menu-->
+         <!--End of Navigation Menu-->
 
           <section id="landing-page">
-            <!--Hero Text-->
-
-      <!--Link to Contact Section-->
-      <a class="projects-link" onclick="contactScroll()" href="#!"><h1 class="display-4 projects-page-link">Let's do it <i id="arrow" class="fas fa-arrow-circle-right"></i></h1></a>
-
-      <!--Scroll down button-->
-      <button class="btn btn-link d-block mx-auto scrolldown-button" onclick="scrollDown()"><i class="fas fa-angle-down"></i></button>
-          </section>
 
       <!--Instagram Feed-->
       <section id="ok">
       <div class="feed-container">
-      <h1 class="display-4 text-center feed-text">See what I've been up to...</h1>
       <!-- SnapWidget -->
       <script src="https://snapwidget.com/js/snapwidget.js"></script>
       <iframe id="instagram-feed" src="https://snapwidget.com/embed/623879" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
       </div>
       </section>
 
-      <!--Quote-->
-      <h1 class="display-4 text-center quote-text">"Self-belief and hard work<br> will always earn you success."</h1>
-
-      <!--Contact Form-->
-      <section id="contact-section">
-      <div class="contact-container">
-        <h1 class="display-2 contact-text">Got an idea?<br>Hit me up!</h1>
-          <div class="typeform-widget contact-form" data-url="https://aniqdanial.typeform.com/to/UnqyQK" data-transparency="100" data-hide-headers=true data-hide-footer=true style="width: 50%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"></div>
+      <!--Services-->
+      <div class="master-services-div">
+      <div class="section1">
+      <h1 class="services-header"><span class="hover-target">SERVICES.</span></h1>
       </div>
-      </section>
+      <div class="section2">
+       <h5 class="services-type">Identity & Branding<br><br>Brand Identity<br>Brand Guidelines<br>Corporate<br>Logo Design<br>Naming<br>Slogan & Tagline</h5>
 
-      <!--Quote 2-->
-      <h1 class="display-4 text-center quote-text-2">"Don't wait for an opportunity.<br>Create it."</h1> 
-      <button class="btn btn-link d-block mx-auto scrollup-button" onclick="scrollUp()"><i class="fas fa-angle-up"></i></button>   
-      </main>
-      <!--End of Main content-->
+      </div>
+      <div class="section3">
+          <h5 class="services-type">Print & Communication<br><br>Poster<br>Signage<br>Illustration<br>Leaflet<br>Packaging<br><br></h5>
 
-      <!--Footer-->
-      <footer>
-          <div class="social-container d-block mx-auto">
-              <ul class="">
-                  <li class="text-center"><a href="https://instagram.com/naxph" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                  <li class="text-center"><a href="https://twitter.com/naxph_" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                  <li class="text-center"><a href="https://github.com/naxph" target="_blank"><i class="fab fa-github"></i></a></li>
-                  <li class="text-center"><a href="https://dribbble.com/naxph" target="_blank"><i class="fab fa-dribbble"></i></a></li>
-                  <li class="text-center"><a href="https://steamcommunity.com/id/saltcsgo" target="_blank"><i class="fab fa-steam"></i></a></li>
-                </ul>
-          </div>
-      </footer>
+      </div>
+      <div class="section4">
+          <h5 class="services-type">Digital & Web<br><br>Social Networks<br>Banner<br>Web Design<br><br><br>And more...</h5>
 
-    <!--Scripts-->
+      </div>
+    </div>
+      <!--Projects-->
+      <div class="d-block mx-auto projects-container">
+        <h1 class="text-center construction-text">Under Construction</h1>
+      </div>
+
+          <!--Scripts-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
